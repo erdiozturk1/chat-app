@@ -1,0 +1,192 @@
+ /* Include the updated CSS here */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-container {
+    display: none; /* Hide chat container initially */
+    flex-direction: row;
+    justify-content: space-between;
+    height: 95%;
+    border: 1px solid blueviolet;
+    padding: 10px;
+}
+
+.online-user-list {
+    width: 20%;
+    height: 100%;
+    border: 1px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+}
+
+.users-title {
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.users-list {
+    display: flex; /* Display users vertically */
+    flex-direction: column; /* Align users in a column */
+    padding: 10px;
+    border: 1px solid blueviolet;
+    gap: 10px; /* Add space between users */
+}
+
+.user {
+    background-color: lightgray;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.user span {
+    display: flex;
+    align-items: center;
+}
+
+.user span i {
+    margin-right: 15px;
+}
+
+.chat-window {
+    width: 70%;
+    height: 100%;
+    border: 1px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure content is pushed to the bottom */
+}
+
+.chat {
+    flex: 1; /* Allow the chat to take up the remaining space */
+    overflow-y: auto; /* Add a scrollbar when the content overflows */
+    padding: 10px;
+}
+
+.chat-input {
+    width: 100%; /* Ensure it takes the full width */
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blueviolet;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.chat-input input {
+    width: 80%; /* Take up 80% of the space */
+    padding: 10px; /* Add padding for better readability */
+}
+
+.chat-input button {
+    width: 20%; /* Take up 20% of the space */
+    padding: 10px; /* Add padding for better readability */
+    background-color: blueviolet; /* Set the background color to blueviolet */
+    color: white; /* Set the text color to white */
+    border: none; /* Remove the border */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
+
+.chat-messager-info {
+    display: flex;
+    padding: 10px;  
+    color: rgb(37, 37, 37);
+}
+
+.chat-messager-info span {
+    margin-right: 15px;
+}
+
+.chat-messager-info i {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.chat-message {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-message.sent {
+    background-color: blueviolet;
+    color: white;
+}
+
+.chat-message.received {
+    background-color: lightgray;
+    color: black;
+}
+
+.chat-message span {
+    font-weight: bold;
+}
+
+.timestamp {
+    font-size: 0.7rem;
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+}
+
+.typing-indicator {
+    font-size: 0.8rem;
+    color: gray;
+    padding: 10px;
+    display: none; /* Hidden by default */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+    .chat-container {
+        flex-direction: column;
+    }
+
+    .online-user-list {
+        width: 100%;
+        height: 30%;
+    }
+
+    .chat-window {
+        width: 100%;
+        height: 70%;
+    }
+}
